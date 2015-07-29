@@ -1,0 +1,44 @@
+CS3753 (Operating Systems)
+Spring 2012
+University of Colorado Boulder
+Programming Assignment 5
+A FUSE Encrypted File System
+Public Code
+
+By Garrett Long
+
+---Dependencies---
+fuse-utils
+openssl
+attr
+attr-dev
+libfuse-dev
+libssl1.0.0 or libssl0.9.8
+libssl-dev
+
+---Files---
+Makefile         - GNU makefile to build all relevant code
+README           - This file
+pa5-encfs.c      - Program to run an encrypted FUSE file system
+
+---Executables---
+pa5-encfs.c    - Mounting executable for Encrypted FUSE filesystem
+
+---Examples---
+
+***Building***
+
+Build All:
+ make
+
+Clean:
+ make clean
+
+***FUSE Examples***
+
+Mount pa5-encfs on existing directory and run an encrypted file system
+ ./pa5-encfs <flags> ... <keyphrase> <mirror directory> <mount directory>
+
+Unmount a FUSE filesystem
+ fusermount -u <Mount Point>
+
